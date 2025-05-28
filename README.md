@@ -1,5 +1,5 @@
-# tmpl
+# DIV
 
-description
+All your <div>s are belong to us
 
-[tmpl.timpish.com](https://tmpl.timpish.com)
+[div.timpish.com](https://div.timpish.com)
