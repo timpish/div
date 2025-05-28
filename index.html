@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>
+        &lt;DIV&gt;DIV!&lt;DIV/&gt;
+    </title>
+    <style>
+        * {
+            outline: .5px gray dashed;
+            margin: 0;
+        }
+
+        :root {
+            color-scheme: light dark;
+            --bg: light-dark(white, black);
+            --fg: light-dark(black, white);
+            --fs-1: .9rem;
+            --fs-2: .75rem;
+            font-family: ui-monospace, monospace;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: gray;
+        }
+
+        footer {
+            font-size: var(--fs-2);
+            padding-block: .5rem;
+        }
+
+        a {
+            color: currentColor;
+            text-decoration-color: var(--fg);
+            text-underline-offset: .25ex;
+            text-decoration-thickness: .05ex;
+        }
+
+        a:hover {
+            color: var(--fg);
+        }
+
+        h1 {
+            color: var(--fg);
+        }
+
+        code {
+            font-size: var(--fs-1);
+        }
+
+        span {
+            color: var(--fg);
+        }
+
+        .center {
+            box-sizing: content-box;
+            margin-inline: auto;
+            max-inline-size: 90vw;
+            text-align: center;
+        }
+
+        .cover {
+            display: flex;
+            flex-direction: column;
+            min-block-size: 100vh;
+        }
+
+        .cover>* {
+            margin-block: 0;
+        }
+
+        .cover> :first-child:not(code) {
+            margin-block-start: 0;
+        }
+
+        .cover> :last-child:not(code) {
+            margin-block-end: 0;
+        }
+
+        .cover>code {
+            margin-block: auto;
+        }
+
+        @keyframes ticker {
+            14% {
+                content: "Figma";
+            }
+
+            28% {
+                content: "Framer";
+            }
+
+            42% {
+                content: "Semplice";
+            }
+
+            56% {
+                content: "Squarespace";
+            }
+
+            70% {
+                content: "UXFolio";
+            }
+
+            84% {
+                content: "Webflow";
+            }
+
+            100% {
+                content: "Wix";
+            }
+        }
+
+        .ticker::after {
+            animation: ticker 3s infinite;
+            display: inline-block;
+            background-color: red;
+            color: white;
+            content: "Figma";
+            font-weight: bold;
+            padding-inline: .5em;
+            text-transform: uppercase;
+            letter-spacing: .15em;
+        }
+    </style>
+</head>
+
+<body class="center cover">
+    <h1>&lt;div&gt;<sup>n<sup>th</sup></sup></h1>
+    <code>
+        <pre>
+&lt;div&gt;
+    &lt;div&gt;
+        &lt;div&gt;
+            &lt;div&gt;
+                &lt;div&gt;
+                    &lt;div&gt;
+                        &lt;div&gt;
+&lt;div&gt;<span>DIVs by <span class="ticker"></span></span>&lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+        </pre>
+    </code>
+    <footer>Inspired by <a href="https://www.youtube.com/watch?v=0wqnc2U9Fyc">Introducing: Webbed Sites</a></footer>
+</body>
+
+</html>
