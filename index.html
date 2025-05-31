@@ -92,15 +92,15 @@
 
         @keyframes ticker {
             14% {
-                content: "Figma";
+                content: "Wix";
             }
 
             28% {
-                content: "Framer";
+                content: "Figma";
             }
 
             42% {
-                content: "Semplice";
+                content: "Webflow";
             }
 
             56% {
@@ -108,28 +108,38 @@
             }
 
             70% {
-                content: "UXFolio";
+                content: "Semplice";
             }
 
             84% {
-                content: "Webflow";
+                content: "UXFolio";
             }
 
             100% {
-                content: "Wix";
+                content: "Framer";
             }
         }
 
         .ticker::after {
-            animation: ticker 3s infinite;
+            animation: ticker 1.5s infinite;
             display: inline-block;
             background-color: red;
             color: white;
-            content: "Figma";
+            content: "Wix";
             font-weight: bold;
             padding-inline: .25em;
             text-transform: uppercase;
             letter-spacing: .15em;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+            }
         }
     </style>
 </head>
